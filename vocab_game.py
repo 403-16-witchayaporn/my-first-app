@@ -164,8 +164,8 @@ if "start" in st.session_state and not st.session_state.get(
 if st.session_state.get("is_ended", False):
     show_result_dialog(
         st.session_state.ans1_val,
-        st.session_state.ans2_val
-        st.session_state.ans3_val
-        st.session_state.ans4_val
+        st.session_state.ans2_val,
+        st.session_state.ans3_val,
+        st.session_state.ans4_val,
     )
 
