@@ -60,7 +60,7 @@ def show_result_dialog(ans1, ans2, ans3, ans4):
         )
 
      # ตรวจข้อ 3
-    if u_ans3 == "cherry ":
+    if u_ans3 == "cherry":
         st.success("✅ ข้อ 3: ถูกต้อง")
         score += 1
     else:
@@ -69,7 +69,7 @@ def show_result_dialog(ans1, ans2, ans3, ans4):
         )
 
     # ตรวจข้อ 4
-    if u_ans4 == "pen ":
+    if u_ans4 == "pen":
         st.success("✅ ข้อ 4: ถูกต้อง")
         score += 1
     else:
