@@ -74,12 +74,12 @@ def show_result_dialog(ans1, ans2, ans3, ans4):
         score += 1
     else:
         st.error(
-            f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{u_ans3}')"
+            f"❌ ข้อ 4: ยังไม่ถูกต้อง (คุณตอบ '{u_ans4}')"
         )
         
     st.info(f"🏆 ได้คะแนนรวม: {score} คะแนน")
 
-    if score == 2:
+    if score == 4:
         st.success("🎉 You win!")
     else:
         st.error("💀 You lose!")
@@ -127,8 +127,13 @@ ans2 = st.text_input(
 )
 
 ans3 = st.text_input(
-    "ข้อ 2: Cats love to eat `f _ s h`. 🍒 ",
+    "ข้อ 3: fruit that on top the cake `c _ e r _ y`. 🍒 ",
     value=st.session_state.ans3_val,
+)
+
+ans4 = st.text_input(
+    "ข้อ 4: use to writing `p _ n`. 🖊️  ",
+    value=st.session_state.ans4_val,
 )
 
 # เก็บคำตอบล่าสุด
@@ -160,5 +165,7 @@ if st.session_state.get("is_ended", False):
     show_result_dialog(
         st.session_state.ans1_val,
         st.session_state.ans2_val
+        st.session_state.ans3_val
+        st.session_state.ans4_val
     )
 
